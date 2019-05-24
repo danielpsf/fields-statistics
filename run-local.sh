@@ -6,15 +6,11 @@ function _buildApplication () {
     ./gradlew assemble
 }
 
-function _buildDockerImage () {
+function _composeUp () {
     echo "Building Docker image..."
     cp build/libs/*.jar docker/
     docker-compose up
 }
 
 time(_buildApplication)
-time(_buildDockerImage)
-# time(_upCompose)
-
-
-
+time(_composeUp)
