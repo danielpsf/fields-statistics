@@ -1,28 +1,19 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.1.5.RELEASE"
-    }
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'java'
+    id 'groovy'
+    id 'idea'
+    id 'eclipse'
+    id 'jacoco'
 }
 
+version = '1.0.0'
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
 }
-
-apply plugin: 'java'
-apply plugin: 'groovy'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: "org.springframework.boot"
-apply plugin: 'jacoco'
-
-version = '1.0.0'
-sourceCompatibility = JavaVersion.VERSION_1_10
-targetCompatibility = JavaVersion.VERSION_1_10
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.5.RELEASE'
@@ -39,6 +30,7 @@ dependencies {
 jacocoTestReport {
     reports {
         html.enabled = true
+        html.destination file("${buildDir}/jacocoHtml")
     }
 }
 
