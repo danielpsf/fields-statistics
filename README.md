@@ -84,7 +84,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 
 - Why did I choose Gradle over Maven?
 
-    _TL;DR: I prefer to. I don't dislike Maven, I just have more familiarity with Gradle._
+    > TL;DR: I prefer to. I don't dislike Maven, I just have more familiarity with Gradle._
     
     - https://www.baeldung.com/ant-maven-gradle (just history)
     - https://stackshare.io/stackups/gradle-vs-maven (community hype alert! :smile:)
@@ -92,8 +92,8 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 
 - Why did I choose to throw unchecked exceptions?
 
-    _TL;DR: I prefer to. I don't hold anything against the other way around, just find RuntimeExceptions to improve
-    readability of my controller methods and once they cannot recover from those, well what's the point on catching it :winki:._
+    > TL;DR: I prefer to. I don't hold anything against the other way around, just find RuntimeExceptions to improve
+    > readability of my controller methods and once they cannot recover from those, well what's the point on catching it :winki:
 
     - https://www.baeldung.com/java-exceptions
     - https://stackabuse.com/exception-handling-in-java-a-complete-guide-with-best-and-worst-practices/
@@ -108,9 +108,9 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 
 - Why did I choose to use DTO instead of passing entities up to the controller?
 
-    _TL;DR: Using entities in any other layer other than persistence is not a good practice and could lead to several
-    coupling issues while the project grows. So, for this example it may seems very unreasonable to use DTOs and make
-    conversion from Entity to DTO and vice versa, but that may save your live in the future when the project grow._ :grimacing:
+    > TL;DR: Using entities in any other layer other than persistence is not a good practice and could lead to several
+    > coupling issues while the project grows. So, for this example it may seems very unreasonable to use DTOs and make
+    > conversion from Entity to DTO and vice versa, but that may save your live in the future when the project grow. :grimacing:
 
     - https://softwareengineering.stackexchange.com/questions/373284/what-is-the-use-of-dto-instead-of-entity
     - https://stackoverflow.com/questions/44872427/should-i-use-jpa-entity-in-rest-request-and-or-response
