@@ -442,3 +442,6 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/vim,java,gradle,emacs,macos,windows,eclipse,netbeans,intellij,intellij+iml,intellij+all,visualstudiocode
+
+# Added manually
+lombok.config
