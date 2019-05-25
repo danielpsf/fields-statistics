@@ -22,6 +22,10 @@ This is a simple microservice to collect and retrieve field statistics using Spr
 - Execute `sdk install java 11.0.3-zulu`
 - Execute `sdk install gradle 5.4.1`
 - Install IntelliJ IDEA CE
+    - [Install Lombok plugin](https://projectlombok.org/setup/intellij)
+    - Configure Lombok plugin
+        - https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000224490/comments/115000241264
+        - https://stackoverflow.com/a/52392862/1855042
 - Install Docker and Docker Compose
 - Checkout this project
 - [Import this project using IntelliJ](https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start)
@@ -129,7 +133,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - [ ] Implement default exception handling
 - [ ] Make the occurrenceAt parameter customizable
 - [ ] Add unit testing (Not feeling like TDD today. :sweat_smile:)
-- [ ] Add Lombok
+- [X] Add Lombok
 - [ ] Add Travis CI pipeline to build and test
 - [ ] Implement E2E tests using Spring Cloud Contract
 - [ ] Implement performance tests using artillery.io

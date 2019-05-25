@@ -1,10 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.5.RELEASE'
     id 'java'
     id 'groovy'
     id 'idea'
     id 'eclipse'
     id 'jacoco'
+
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id "io.freefair.lombok" version "3.6.4"
 }
 
 version = '1.0.0'
