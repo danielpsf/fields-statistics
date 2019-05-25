@@ -19,7 +19,7 @@ This is a simple microservice to collect and retrieve field statistics using Spr
 - Install SDK Man
     - `curl -s "https://get.sdkman.io" | bash`
     - `source "$HOME/.sdkman/bin/sdkman-init.sh"`
-- Execute `sdk install java 10.0.2-zulu`
+- Execute `sdk install java 11.0.3-zulu`
 - Execute `sdk install gradle 5.4.1`
 - Install IntelliJ IDEA CE
 - Install Docker and Docker Compose
@@ -68,8 +68,10 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 
 ### Interesting readings and decision points
 
-- Why did I choose Java 10 and what about that interesting parameter `-XX:+UseContainerSupport`
-    - https://www.baeldung.com/java-10-overview
+- Why did I choose Java 11 and what about that interesting parameter `-XX:+UseContainerSupport`
+    - https://medium.com/criciumadev/its-time-migrating-to-java-11-5eb3868354f9 (_I'm on the second step, so no modules just yet_)
+    - https://www.baeldung.com/java-10-overview (_Good things have been added in the 10th version_)
+    - https://blog.docker.com/2018/04/improved-docker-container-integration-with-java-10/
     - https://royvanrijn.com/blog/2018/05/java-and-docker-memory-limits
     - https://developers.redhat.com/blog/2017/03/14/java-inside-docker/
     - https://blog.csanchez.org/2017/05/31/running-a-jvm-in-a-container-without-getting-killed/
@@ -132,7 +134,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - [ ] Implement E2E tests using Spring Cloud Contract
 - [ ] Implement performance tests using artillery.io
 - [ ] Implement logging using aspect
-- [ ] Upgrade to Java 11
+- [X] Upgrade to Java 11
 - [ ] Optimize docker-compose to limit memory and cpu
 
 
