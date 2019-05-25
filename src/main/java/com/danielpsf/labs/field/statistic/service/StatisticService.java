@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Service
 public class StatisticService {
 
+    public static final int PAST_30_DAYS = 30;
     private StatisticRepository repository;
     private StatisticFactory factory;
 
@@ -27,7 +28,7 @@ public class StatisticService {
 
     public StatisticResponse fetchStatistic() {
         return factory.createResponse(
-                repository.fetchStatistics(getCurrentDateMinus(30), getCurrentDate())
+                repository.fetchStatistics(getCurrentDateMinus(PAST_30_DAYS), getCurrentDate())
         );
     }
 
