@@ -10,27 +10,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class StatisticFactory {
 
-    public StatisticRequest createRequest(Statistic statistic) {
-        return new StatisticRequest.Builder()
-                .withOccurrenceAt(statistic.getOccurrenceAt())
-                .withVegetation(statistic.getVegetation())
-                .build();
-    }
-
     public Statistic create(StatisticRequest statisticRequest) {
-        return new Statistic.Builder()
-                .withVegetation(statisticRequest.getVegetation())
-                .withOccurrenceAt(statisticRequest.getOccurrenceAt())
+        return Statistic.builder()
+                .occurrenceAt(statisticRequest.getOccurrenceAt())
+                .vegetation(statisticRequest.getVegetation())
                 .build();
-    }
+}
 
     public StatisticResponse createResponse(StatisticData statisticData) {
-        return new StatisticResponse.Builder()
-                .withVegatationResponse(
-                        new VegetationResponse.Builder()
-                                .withMin(statisticData.getMin())
-                                .withMax(statisticData.getMax())
-                                .withAvg(statisticData.getAvg())
+        return StatisticResponse.builder()
+                .vegetationResponse(
+                        VegetationResponse.builder()
+                                .min(statisticData.getMin())
+                                .max(statisticData.getMax())
+                                .avg(statisticData.getAvg())
                                 .build()
                 )
                 .build();

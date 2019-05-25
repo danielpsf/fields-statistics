@@ -7,11 +7,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public abstract class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
     protected ErrorResponse getErrorResponse(RuntimeException ex, HttpStatus status) {
-        return new ErrorResponse.Builder()
-                .withStatus(status)
-                .withMessage(ex.getMessage())
-                .withError(ex.getClass()
-                        .getSimpleName())
+        return ErrorResponse.builder()
+                .status(status)
+                .message(ex.getMessage())
+                .error(ex.getClass().getSimpleName())
                 .build();
     }
 }
