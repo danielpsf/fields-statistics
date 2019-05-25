@@ -3,12 +3,8 @@ package com.danielpsf.labs.field.statistic.controller;
 import com.danielpsf.labs.field.statistic.domain.request.StatisticRequest;
 import com.danielpsf.labs.field.statistic.domain.response.StatisticResponse;
 import com.danielpsf.labs.field.statistic.service.StatisticService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/field-statistics")
