@@ -93,7 +93,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - Why did I choose to throw unchecked exceptions?
 
     > TL;DR: I prefer to. I don't hold anything against the other way around, just find RuntimeExceptions to improve
-    > readability of my controller methods and once they cannot recover from those, well what's the point on catching it :winki:
+    > readability of my controller methods and once they cannot recover from those, well what's the point on catching it :wink:
 
     - https://www.baeldung.com/java-exceptions
     - https://stackabuse.com/exception-handling-in-java-a-complete-guide-with-best-and-worst-practices/
