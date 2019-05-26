@@ -10,6 +10,13 @@ import java.util.Date;
 
 public interface StatisticRepository extends JpaRepository<Statistic, Long> {
 
-    @Query(value = "SELECT NEW com.danielpsf.labs.field.statistic.domain.response.StatisticData(MIN(s.vegetation), MAX(s.vegetation), AVG(s.vegetation)) FROM Statistic s where occurrenceAt BETWEEN :startDate AND :endDate")
+    @Query(value = "SELECT " +
+            "NEW com.danielpsf.labs.field.statistic.domain.response.StatisticData(" +
+                "MIN(s.vegetation)," +
+                "MAX(s.vegetation)," +
+                "AVG(s.vegetation)" +
+            ") " +
+            "FROM Statistic s " +
+            "WHERE occurrenceAt BETWEEN :startDate AND :endDate")
     public StatisticData fetchStatistics(@Param("startDate")Date startDate, @Param("endDate")Date endDate);
 }

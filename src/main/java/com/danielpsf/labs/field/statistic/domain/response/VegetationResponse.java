@@ -7,7 +7,7 @@ import lombok.Getter;
 @Builder
 public class VegetationResponse {
 
-    private Float min;
-    private Float max;
+    private Double min;
+    private Double max;
     private Double avg;
 }

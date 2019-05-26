@@ -9,6 +9,6 @@ import java.util.Date;
 @Builder
 public class StatisticRequest {
 
-    private Float vegetation;
+    private Double vegetation;
     private Date occurrenceAt;
 }

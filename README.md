@@ -47,7 +47,7 @@ This is a simple microservice to collect and retrieve field statistics using Spr
 
 ```
 curl -X POST http://localhost:8080/field-statistics -d '{
-    "vegetation": 0.9,
+    "vegetation": 0.98,
     "occurrenceAt": "2019-04-23T19:40Z"
 }'
 ```
@@ -63,9 +63,9 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
  100    70    0    70    0     0   5276      0 --:--:-- --:--:-- --:--:--  5384
  {
      "vegetationResponse": {
-         "min": 0.2,
-         "max": 0.2,
-         "avg": 0.20000000298023224
+         "min": 0.98,
+         "max": 0.99,
+         "avg": 0.985
      }
  }
 ```
@@ -125,13 +125,8 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - [ ] Implement statistics retrieve endpoint
     - [X] Create the endpoint
     - [X] Retrieve statistics from database
-    - [ ] Format the AVG result to 2 decimals only
-    - [ ] Check with the PO what should be returned instead of `null` when no data has not been inserted yet
-    - [ ] Try to optimize JPA Query to use interface projection
-- [ ] Make a bean out of ObjectMapper to optimize memory consumption
-    - [ ] Configure ObjectMapper with good practice default values
 - [ ] Implement default exception handling
-- [ ] Make the occurrenceAt parameter customizable
+- [ ] Implement logging
 - [ ] Add unit testing (Not feeling like TDD today. :sweat_smile:)
 - [X] Add Lombok
 - [ ] Add Travis CI pipeline to build and test
