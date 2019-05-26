@@ -6,7 +6,6 @@ import lombok.Getter;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table
 @Entity
 @Getter
 @Builder
