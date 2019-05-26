@@ -1,4 +1,4 @@
-package com.danielpsf.labs.field.statistic.domain;
+package com.danielpsf.labs.field.statistic.metric.domain;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity
 @Getter
 @Builder
-public class Statistic {
+public class Metric {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
