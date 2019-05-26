@@ -1,7 +1,7 @@
 package com.danielpsf.labs.field.statistic.report.controller;
 
 import com.danielpsf.labs.field.statistic.report.domain.StatisticResponse;
-import com.danielpsf.labs.field.statistic.report.service.StatisticService;
+import com.danielpsf.labs.field.statistic.report.service.ReportService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/field-statistics")
 public class ReportController {
 
-    private final StatisticService service;
+    private final ReportService service;
 
-    public ReportController(StatisticService service) {
+    public ReportController(ReportService service) {
         this.service = service;
     }
 
     @GetMapping
     public StatisticResponse getStatistic() {
-        return service.fetchStatistic();
+        return service.generateStatisticReport();
     }
 }
