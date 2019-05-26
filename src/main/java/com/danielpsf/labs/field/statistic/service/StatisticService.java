@@ -4,16 +4,16 @@ import com.danielpsf.labs.field.statistic.domain.factory.StatisticFactory;
 import com.danielpsf.labs.field.statistic.domain.request.StatisticRequest;
 import com.danielpsf.labs.field.statistic.domain.response.StatisticResponse;
 import com.danielpsf.labs.field.statistic.repository.StatisticRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Date;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 
 @Service
 public class StatisticService {
 
-    public static final int PAST_30_DAYS = 30;
+    private static final int PAST_30_DAYS = 30;
     private StatisticRepository repository;
     private StatisticFactory factory;
 
@@ -33,10 +33,19 @@ public class StatisticService {
     }
 
     private Date getCurrentDateMinus(int days) {
-        return Date.valueOf(LocalDate.now().minusDays(days));
+        return Date.from(
+                LocalDate.now()
+                        .minusDays(days)
+                        .atStartOfDay(ZoneId.systemDefault())
+                        .toInstant()
+        );
     }
 
     private Date getCurrentDate() {
-        return Date.valueOf(LocalDate.now());
+        return Date.from(
+                LocalDate.now()
+                        .atStartOfDay(ZoneId.systemDefault())
+                        .toInstant()
+        );
     }
 }
