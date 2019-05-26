@@ -1,4 +1,4 @@
-package com.danielpsf.labs.field.statistic;
+package com.danielpsf.labs.field;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

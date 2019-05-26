@@ -1,4 +1,4 @@
-package com.danielpsf.labs.field.statistic.exception;
+package com.danielpsf.labs.field.statistic.metric.exception;
 
 public class NotImplementedException extends RuntimeException {
 

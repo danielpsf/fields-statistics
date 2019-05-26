@@ -1,7 +1,6 @@
-package com.danielpsf.labs.field.statistic.exception.handler;
+package com.danielpsf.labs.field.statistic.metric.exception;
 
-import com.danielpsf.labs.field.statistic.exception.NotImplementedException;
-import com.danielpsf.labs.field.statistic.exception.CustomExceptionHandler;
+import com.danielpsf.labs.field.exception.CustomExceptionHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -20,9 +19,9 @@ public class NotImplementedExceptionHandler extends CustomExceptionHandler {
     protected ResponseEntity<Object> handleNotImplemented(NotImplementedException ex, WebRequest request) {
         LOG.debug("NotImplementedExceptionHandler.handleNotImplemented: Functionality is still under development");
         return handleExceptionInternal(ex,
-                getErrorResponse(ex, HttpStatus.BAD_REQUEST),
+                getErrorResponse(ex, HttpStatus.NOT_IMPLEMENTED),
                 new HttpHeaders(),
-                HttpStatus.BAD_REQUEST,
+                HttpStatus.NOT_IMPLEMENTED,
                 request);
     }
 }

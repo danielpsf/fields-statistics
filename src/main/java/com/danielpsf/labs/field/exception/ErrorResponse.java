@@ -1,4 +1,4 @@
-package com.danielpsf.labs.field.statistic.domain;
+package com.danielpsf.labs.field.exception;
 
 import lombok.Builder;
 import lombok.Getter;

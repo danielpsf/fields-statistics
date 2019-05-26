@@ -1,6 +1,5 @@
-package com.danielpsf.labs.field.statistic.exception;
+package com.danielpsf.labs.field.exception;
 
-import com.danielpsf.labs.field.statistic.domain.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
