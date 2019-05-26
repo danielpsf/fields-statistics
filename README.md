@@ -129,12 +129,26 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - [ ] Implement logging
 - [ ] Add unit testing (Not feeling like TDD today. :sweat_smile:)
 - [X] Add Lombok
+- [X] Upgrade to Java 11
+
+
+#### Open questions
+
+- [ ] Check with the PO how big does the decimal report must be
+- [ ] Check with the PO what should be returned when no data has been saved if `null` isn't an acceptable return value
+
+
+#### Extra mile:
+
+- [ ] Make the occurrenceAt parameter customizable preserving the default to 30 days
 - [ ] Add Travis CI pipeline to build and test
 - [ ] Implement E2E tests using Spring Cloud Contract
 - [ ] Implement performance tests using artillery.io
-- [ ] Implement logging using aspect
-- [X] Upgrade to Java 11
+- [ ] Add [Spring FOX](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) support
 - [ ] Optimize docker-compose to limit memory and cpu
+- [ ] Make a bean out of ObjectMapper to optimize memory consumption
+    - [ ] Configure ObjectMapper with good practice default values
+- [ ] Try to optimize JPA Query to use interface projection instead of class projection
 
 
 ### Improvements to discuss with PO
