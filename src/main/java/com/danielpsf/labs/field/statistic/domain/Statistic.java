@@ -18,5 +18,5 @@ public class Statistic {
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date occurrenceAt;
-    private Float vegetation;
+    private Double vegetation;
 }

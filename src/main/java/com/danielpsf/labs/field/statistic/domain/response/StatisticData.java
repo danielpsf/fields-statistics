@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public class StatisticData {
 
-    private Float min;
-    private Float max;
+    private Double min;
+    private Double max;
     private Double avg;
 }
