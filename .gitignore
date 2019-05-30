@@ -445,3 +445,4 @@ gradle-app.setting
 
 # Added manually
 lombok.config
+docker/
