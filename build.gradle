@@ -1,3 +1,5 @@
+import com.bmuschko.gradle.docker.tasks.image.Dockerfile
+
 plugins {
     id 'java'
     id 'groovy'
@@ -7,6 +9,7 @@ plugins {
 
     id 'org.springframework.boot' version '2.1.5.RELEASE'
     id "io.freefair.lombok" version "3.6.4"
+    id 'com.bmuschko.docker-remote-api' version '4.9.0'
 }
 
 version = '1.0.0'
@@ -33,6 +36,31 @@ jacocoTestReport {
     reports {
         html.enabled = true
         html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+task createDockerfile(type: Dockerfile, dependsOn: build) {
+    outputs.upToDateWhen { false }
+    destFile = file('docker/Dockerfile')
+
+    from('openjdk:11')
+    label(['maintainer': 'Daniel Fernandes <danielpsf@gmail.com>'])
+    environmentVariable('JAVA_OPTS', '-XX:+UseContainerSupport')
+
+    copyFile("${jar.archiveFileName.get()}", '/home/')
+    copyFile("run.sh", '/home/')
+
+    //Simple hack to prevention Windows to mess up with encoding and make the run script unusable
+    runCommand("apt-get update && apt-get install dos2unix -y")
+    runCommand("dos2unix /home/run.sh")
+
+    defaultCommand('sh', '/home/run.sh', "/home/${jar.archiveFileName.get()}")
+
+    exposePort(8080)
+
+    doLast {
+        ant.move(file: jar.archiveFile.get(), tofile: "docker/${jar.archiveFileName.get()}")
+        ant.copy(file: 'scripts/run.sh', tofile: 'docker/run.sh')
     }
 }
 

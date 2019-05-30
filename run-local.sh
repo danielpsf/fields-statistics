@@ -3,12 +3,11 @@
 function _buildApplication () {
     echo "Building Application..."
     chmod +x gradlew
-    ./gradlew assemble
+    ./gradlew createDockerfile
 }
 
 function _composeUp () {
     echo "Building Docker image..."
-    cp build/libs/*.jar docker/
     docker-compose up
 }
 

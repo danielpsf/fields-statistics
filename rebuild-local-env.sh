@@ -8,14 +8,13 @@ function _delete_docker_image () {
     docker rmi field-statistics_app
 }
 
-function _build_application () {
+function _buildApplication () {
     echo "Building Application..."
     chmod +x gradlew
-    ./gradlew assemble
+    ./gradlew createDockerfile
 }
 
 function _compose_up () {
-    cp build/libs/*.jar docker/
     docker-compose up
 }
 
