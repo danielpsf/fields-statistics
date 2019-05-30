@@ -5,8 +5,8 @@ import com.danielpsf.labs.field.statistic.report.domain.StatisticResponse;
 import com.danielpsf.labs.field.statistic.report.repository.ReportRepository;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Date;
 
 @Service
@@ -29,18 +29,13 @@ public class ReportService {
 
     private Date getCurrentDateMinus(int days) {
         return Date.from(
-                LocalDate.now()
-                        .minusDays(days)
-                        .atStartOfDay(ZoneId.systemDefault())
-                        .toInstant()
+                Instant.now().minus(Duration.ofDays(days))
         );
     }
 
     private Date getCurrentDate() {
         return Date.from(
-                LocalDate.now()
-                        .atStartOfDay(ZoneId.systemDefault())
-                        .toInstant()
+                Instant.now()
         );
     }
 }
