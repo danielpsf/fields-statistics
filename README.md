@@ -147,8 +147,6 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - [ ] Implement performance tests using artillery.io
 - [ ] Add [Spring FOX](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) support
 - [ ] Optimize docker-compose to limit memory and cpu
-- [ ] Make a bean out of ObjectMapper to optimize memory consumption
-    - [ ] Configure ObjectMapper with good practice default values
 - [ ] Try to optimize JPA Query to use interface projection instead of class projection
 
 
