@@ -38,6 +38,7 @@ jacocoTestReport {
         html.destination file("${buildDir}/jacocoHtml")
     }
 }
+test.finalizedBy(jacocoTestReport)
 
 task createDockerfile(type: Dockerfile, dependsOn: build) {
     outputs.upToDateWhen { false }
