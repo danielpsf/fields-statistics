@@ -142,7 +142,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 #### Extra mile:
 
 - [ ] Make the occurrenceAt parameter customizable preserving the default to 30 days
-- [ ] Add Travis CI pipeline to build and test
+- [X] Add Travis CI pipeline to build and test
 - [ ] Implement E2E tests using Spring Cloud Contract
 - [ ] Implement performance tests using artillery.io
 - [ ] Add [Spring FOX](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) support
