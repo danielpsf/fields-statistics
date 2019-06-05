@@ -1,5 +1,6 @@
 ## Field statistics
 
+[![Build Status](https://travis-ci.org/danielpsf/fields-statistics.svg?branch=master)](https://travis-ci.org/danielpsf/fields-statistics) [![codecov](https://codecov.io/gh/danielpsf/fields-statistics/branch/master/graph/badge.svg)](https://codecov.io/gh/danielpsf/fields-statistics)
 
 This is a simple microservice to collect and retrieve field statistics using Spring Boot and Maria DB running on Docker.
 
