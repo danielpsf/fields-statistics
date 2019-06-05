@@ -1,5 +1,6 @@
 ## Field statistics
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/30207d739ffd4aa9a05aa1b86ba45d97)](https://app.codacy.com/app/danielpsf/fields-statistics?utm_source=github.com&utm_medium=referral&utm_content=danielpsf/fields-statistics&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/danielpsf/fields-statistics.svg?branch=master)](https://travis-ci.org/danielpsf/fields-statistics) [![codecov](https://codecov.io/gh/danielpsf/fields-statistics/branch/master/graph/badge.svg)](https://codecov.io/gh/danielpsf/fields-statistics)
 
 This is a simple microservice to collect and retrieve field statistics using Spring Boot and Maria DB running on Docker.
