@@ -12,4 +12,3 @@ before_install:
 
 after_success:
   - java -jar codacy-coverage-reporter-assembly.jar report -l Java -r build/reports/jacoco/report.xml
-  - bash <(curl -s https://codecov.io/bash)
