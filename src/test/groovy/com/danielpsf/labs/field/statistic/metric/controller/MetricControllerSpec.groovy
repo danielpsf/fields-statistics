@@ -14,7 +14,7 @@ class MetricControllerSpec extends Specification {
     MetricService service
 
     @Shared
-    MetricRequest metricEntry = MetricRequest.builder()
+    MetricRequest metricRequestEntry = MetricRequest.builder()
             .vegetation(1.5)
             .occurrenceAt(Date.from(Instant.parse("2019-06-05T00:01:00Z")))
             .build()
@@ -28,10 +28,10 @@ class MetricControllerSpec extends Specification {
         MetricController controller = new MetricController(service)
 
         when:
-        controller.postMetric(metricEntry)
+        controller.postMetric(metricRequestEntry)
 
         then:
-        1 * service.persistStatistic(metricEntry)
+        1 * service.persistStatistic(metricRequestEntry)
     }
 
     def "should retrieve NotImplemented exception when trying to use putMetric method"() {
