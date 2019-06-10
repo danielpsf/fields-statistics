@@ -130,7 +130,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
     - [X] Retrieve statistics from database
 - [ ] Implement default exception handling
 - [ ] Implement logging
-- [ ] Add unit testing (Not feeling like TDD today. :sweat_smile:)
+- [X] Add unit testing (Not feeling like TDD today. :sweat_smile:)
 - [X] Add Lombok
 - [X] Upgrade to Java 11
 
