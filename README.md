@@ -107,9 +107,9 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
     > TL;DR: I'm a trully believer in the living documentation of the code, meaning that the tests are the first thing
     > someone should read to understand what your code does, and Spock brings that capability to your tests. It was based
     > on RSpec and it carries the most advance testing features from modern world into both Java, Groovy or even Kotlin.
-    > On the current state of JUnit, Mockito and Hamcrest one might question the legitimate of using Spock, so to be clear
+    > On the current state of JUnit, Mockito and Hamcrest one might question the legitimacy of using Spock, so to be clear
     > I'm a huge fan of those tecnologies and I do not opose myself to them, as you can see on my other repositories ([here](https://github.com/danielpsf/java-design-patterns/blob/master/builder/src/test/java/com/danielpsf/labs/BuilderSpec.java), [here](https://github.com/danielpsf/java-design-patterns/blob/master/command/src/test/java/com/danielpsf/lab/FleetSpec.java), [here](https://github.com/danielpsf/java-design-patterns/blob/master/command/src/test/java/com/danielpsf/lab/AdmiralSpec.java), [here](https://github.com/danielpsf/java-design-patterns/blob/master/composite/src/test/java/com/danielpsf/labs/CompositeSpec.java) and so on), my point is that
-    > Spock brings more readability as well as technological capability to tests as you try more modern approaches on the tests.
+    > Spock brings more readability as well as technological capability to tests as you try more modern approaches on the tests such as data driven tests or complex social interaction for unit testing.
 
     - https://dzone.com/articles/spock-vs-junit-which-one-should-you-choose
     - http://www.blog.j-labs.pl/2017/02/Spock-vs-Junit-with-Mockito
