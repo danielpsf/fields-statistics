@@ -104,10 +104,26 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
     - https://stackoverflow.com/a/23179413/1855042
 
 - Why did I choose to use Spock over JUnit?
+    > TL;DR: I'm a trully believer in the living documentation of the code, meaning that the tests are the first thing
+    > someone should read to understand what your code does, and Spock brings that capability to your tests. It was based
+    > on RSpec and it carries the most advance testing features from modern world into both Java, Groovy or even Kotlin.
+    > On the current state of JUnit, Mockito and Hamcrest one might question the legitimate of using Spock, so to be clear
+    > I'm a huge fan of those tecnologies and I do not opose myself to them, as you can see on my other repositories ([here](https://github.com/danielpsf/java-design-patterns/blob/master/builder/src/test/java/com/danielpsf/labs/BuilderSpec.java), [here](https://github.com/danielpsf/java-design-patterns/blob/master/command/src/test/java/com/danielpsf/lab/FleetSpec.java), [here](https://github.com/danielpsf/java-design-patterns/blob/master/command/src/test/java/com/danielpsf/lab/AdmiralSpec.java), [here](https://github.com/danielpsf/java-design-patterns/blob/master/composite/src/test/java/com/danielpsf/labs/CompositeSpec.java) and so on), my point is that
+    > Spock brings more readability as well as technological capability to tests as you try more modern approaches on the tests.
+
     - https://dzone.com/articles/spock-vs-junit-which-one-should-you-choose
     - http://www.blog.j-labs.pl/2017/02/Spock-vs-Junit-with-Mockito
     - https://bmuschko.com/blog/junit5-vs-spock-showdown/
     - https://www.youtube.com/watch?v=oEamW8_FtAg
+    - https://www.slideshare.net/hlship/spock-a-highly-logical-way-to-test (learn spock in 5min)
+    - http://spockframework.org/spock/docs/1.3/all_in_one.html
+    
+    _This link guides you to my personal brain dump of links I've already read and changed the way I think about a lot of
+    things. A personal bookmark one might say. But you'll find in there a lot of links related to Software Testing that
+    defined the way I see of this amazing field of computer science today._ :wink:
+    - https://1drv.ms/o/s!Ap3C0ryKbvyZhQENhKNWZk7PHxng
+    
+    
 
 - Why did I choose to use DTO instead of passing entities up to the controller?
 
