@@ -120,7 +120,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
     
     _This link guides you to my personal brain dump of links I've already read and changed the way I think about a lot of
     things. A personal bookmark one might say. But you'll find in there a lot of links related to Software Testing that
-    defined the way I see of this amazing field of computer science today._ :wink:
+    defined the way I see this amazing field of computer science._ :wink:
     - https://1drv.ms/o/s!Ap3C0ryKbvyZhQENhKNWZk7PHxng
     
     
