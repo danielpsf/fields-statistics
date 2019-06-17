@@ -47,7 +47,7 @@ class MetricControllerIntegrationSpec extends IntegrationTestSpecification {
                 body: ["vegetation": 0.0001, "occurrenceAt": "2019-06-15T00:01:01Z"]
         )
 
-        then: "Status is 501"
+        then: "Status is 204"
         response.status == 204
 
         and: "Body must be empty"
