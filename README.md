@@ -109,6 +109,12 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
     - https://bmuschko.com/blog/junit5-vs-spock-showdown/
     - https://www.youtube.com/watch?v=oEamW8_FtAg
 
+- Integration testing
+    - https://www.slideshare.net/restlet/take-a-groovy-rest-55361056
+    - https://www.blazemeter.com/blog/testing-your-api-assertions-with-the-spock-framework/
+    - https://www.baeldung.com/spring-testing-separate-data-source
+    - https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-integration-testing/
+
 - Why did I choose to use DTO instead of passing entities up to the controller?
 
     > TL;DR: Using entities in any other layer other than persistence is not a good practice and could lead to several
@@ -145,7 +151,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 
 - [ ] Make the occurrenceAt parameter customizable preserving the default to 30 days
 - [X] Add Travis CI pipeline to build and test
-- [ ] Implement E2E tests using Spring Cloud Contract
+- [ ] Implement integration tests
 - [ ] Implement performance tests using artillery.io
 - [ ] Add [Spring FOX](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) support
 - [ ] Optimize docker-compose to limit memory and cpu
