@@ -59,6 +59,14 @@ jacocoTestReport {
         xml.enabled true
         xml.destination file("${buildDir}/reports/jacoco/report.xml")
     }
+    afterEvaluate {
+        classDirectories.setFrom(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    'com/danielpsf/labs/field/config/**',
+                    'com/danielpsf/labs/field/Application**'
+            ])
+        })
+    }
 }
 test.finalizedBy(jacocoTestReport)
 
