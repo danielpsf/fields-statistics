@@ -147,7 +147,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
     - [X] Create the endpoint
     - [X] Save the entry into database
     - [ ] Implement bean validation (check with the PO what are the possible entries that I could expect in here and extrapolate)
-- [ ] Implement statistics retrieve endpoint
+- [X] Implement statistics retrieve endpoint
     - [X] Create the endpoint
     - [X] Retrieve statistics from database
 - [ ] Implement default exception handling
@@ -167,7 +167,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 
 - [ ] Make the occurrenceAt parameter customizable preserving the default to 30 days
 - [X] Add Travis CI pipeline to build and test
-- [ ] Implement integration tests
+- [X] Implement integration tests
 - [ ] Implement performance tests using artillery.io
 - [ ] Add [Spring FOX](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) support
 - [ ] Optimize docker-compose to limit memory and cpu
