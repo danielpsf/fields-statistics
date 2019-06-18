@@ -5,6 +5,7 @@ before_script:
   - chmod +x gradlew
 script:
   - ./gradlew build
+  - ./gradlew integrationTest
 
 before_install:
   - sudo apt-get install jq
