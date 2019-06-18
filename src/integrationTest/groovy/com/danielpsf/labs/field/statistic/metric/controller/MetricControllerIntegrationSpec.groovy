@@ -23,16 +23,16 @@ class MetricControllerIntegrationSpec extends IntegrationTestSpecification {
     }
 
     def "PutMetric should return a not Implemented Error"() {
-        when: "get all arrivals"
+        when: "updating metrics"
         def response = restClient.put(
                 path: '/field-statistics',
                 contentType: MediaType.APPLICATION_JSON
         )
 
-        then: "Status is 501"
+        then: "the status should be 501"
         response.status == 501
 
-        and: "Body contains proper values"
+        and: "The body should contains the proper values"
         response.data.status == 'NOT_IMPLEMENTED'
         response.data.message == 'Not supported yet'
         response.data.error == 'NotImplementedException'
@@ -40,17 +40,17 @@ class MetricControllerIntegrationSpec extends IntegrationTestSpecification {
     }
 
     def "PostMetric should return an empty body and HTTP Status 204"() {
-        when: "get all arrivals"
+        when: "creating metrics"
         def response = restClient.post(
                 path: '/field-statistics',
                 contentType: MediaType.APPLICATION_JSON,
                 body: ["vegetation": 0.0001, "occurrenceAt": "2019-06-15T00:01:01Z"]
         )
 
-        then: "Status is 204"
+        then: "the status should be 204"
         response.status == 204
 
-        and: "Body must be empty"
+        and: "the body must be empty"
         response.data == null
     }
 }
