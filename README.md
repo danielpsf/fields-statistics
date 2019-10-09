@@ -168,6 +168,7 @@ $ curl -X GET http://localhost:8080/field-statistics | python -m json.tool
 - [ ] Make the occurrenceAt parameter customizable preserving the default to 30 days
 - [X] Add Travis CI pipeline to build and test
 - [X] Implement integration tests
+    - [ ] Try to implement real integration tests using real database bu spinning up a testing container using https://www.baeldung.com/docker-test-containers
 - [ ] Implement performance tests using artillery.io
 - [ ] Add [Spring FOX](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) support
 - [ ] Optimize docker-compose to limit memory and cpu
